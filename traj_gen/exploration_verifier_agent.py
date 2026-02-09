@@ -18,21 +18,6 @@ class ExplorationVerifierAgent:
 
     def verify(self, trajectory_data: Dict, context: SharedContext,
                screenshot_paths: list[str]) -> Dict:
-        """
-        Trajectory 검증 수행
-
-        Args:
-            trajectory_data: 단일 사이트 탐색 결과 (actions, task_summary 등)
-            context: SharedContext (goal, mode, comparison/sequential 정보)
-            screenshot_paths: 스크린샷 경로 리스트 (최소 마지막 스크린샷)
-
-        Returns:
-            {
-                "goal_verification": {"status": "success"|"failure", "reasoning": "..."},
-                "mode_verification": {"status": "success"|"failure", "reasoning": "..."},
-                "raw_response": "..."
-            }
-        """
         action_history = self._format_action_history(trajectory_data)
 
         # 모드별 검증 프롬프트 구성
