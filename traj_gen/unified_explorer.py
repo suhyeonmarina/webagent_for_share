@@ -1,25 +1,3 @@
-"""
-Unified Explorer: Exploration-First Approach for Sequential and Comparison Tasks
-
-기존 방식 (Task-first):
-    Task 계획 생성 → Action 합성 (어렵고 비쌈)
-
-새 방식 (Exploration-first):
-    웹사이트 탐방 → Action 자연 생성 → Task Refine → Context 추출 → 다음 사이트
-
-이 방식의 장점:
-1. Action이 실제 페이지 상태를 보고 생성되므로 더 정확함
-2. Task가 탐색 과정에서 자연스럽게 구체화됨
-3. Sequential과 Comparison 모두 같은 프레임워크로 처리 가능
-
-- SharedContext: 사이트 간 공유되는 컨텍스트 (goal, 추출된 정보, 결과 등)
-- ExplorationProposalAgent: 첫 step에서 context를 활용해 sub_task + action 생성
-- ExplorationRefinerAgent: 후속 step에서 action 생성
-- InfoExtractor: 탐색 완료 후 다음 사이트에 필요한 정보 추출
-- UnifiedExplorer: 메인 통합 탐색기
-
-"""
-
 import os
 import re
 import copy
