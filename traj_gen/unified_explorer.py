@@ -18,32 +18,6 @@ from .exploration_verifier_agent import ExplorationVerifierAgent
 
 
 class UnifiedExplorer:
-    """
-    Exploration-First 방식의 통합 탐색기
-
-    Sequential과 Comparison 모두 지원:
-    - Sequential: 사이트 A 결과 → 사이트 B 입력
-    - Comparison: 각 사이트에서 같은 대상 검색 → 비교
-
-    사용법:
-    ```python
-    explorer = UnifiedExplorer(args)
-
-    # Sequential 모드
-    result = explorer.run(
-        high_level_goal="Austin에서 2BR 아파트 찾고 이사 준비하기",
-        websites=["zillow.com", "maps.google.com", "uhaul.com"],
-        mode="sequential"
-    )
-
-    # Comparison 모드
-    result = explorer.run(
-        high_level_goal="MacBook Pro 16인치 최저가 찾기",
-        websites=["amazon.com", "bestbuy.com", "walmart.com"],
-        mode="comparison"
-    )
-    ```
-    """
 
     def __init__(self, args):
         self.args = args
@@ -55,20 +29,7 @@ class UnifiedExplorer:
     def run(self, high_level_goal: str, websites: List[str], mode: str = "sequential",
             output_dir: str = "unified_explorer", comparison_criteria: List[str] = None,
             dependency: str = None) -> Dict:
-        """
-        멀티사이트 탐색 실행
-
-        Args:
-            high_level_goal: 고수준 목표
-            websites: 탐색할 웹사이트 URL 리스트
-            mode: "sequential" 또는 "comparison"
-            output_dir: 결과 저장 디렉토리
-            comparison_criteria: (comparison 모드) 비교 기준 리스트
-
-        Returns:
-            전체 탐색 결과 딕셔너리
-        """
-
+                
         # Initialize shared context
         context = SharedContext(
             high_level_goal=high_level_goal or "",
