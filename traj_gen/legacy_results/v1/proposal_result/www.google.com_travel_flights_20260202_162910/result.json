@@ -1,0 +1,18 @@
+{
+  "url": "https://www.google.com/travel/flights",
+  "mode": "comparison",
+  "goal": "Find the lowest-price round-trip flight from Busan to Tokyo for travel March 15–20, 2026",
+  "context": "High-level Goal: Find the lowest-price round-trip flight from Busan to Tokyo for travel March 15–20, 2026\nComparison Target: (Not specified — propose a specific target consistent with the goal)\nCompare by: price",
+  "is_action_valid": true,
+  "pred": {
+    "high_level_goal": "Find the lowest-price round-trip flight from Busan to Tokyo for travel March 15–20, 2026",
+    "comparison_target_info": "price: N/A on this page yet (destination and dates not entered)",
+    "comparison_criteria": [
+      "price"
+    ],
+    "sub_task": "Enter the destination (Tokyo) into the 'Where to?' field so I can set travel dates and search for fares from Busan",
+    "action_in_natural_language": "Type Tokyo into the destination (Where to?) input field",
+    "grounded_action": "type [152] [Tokyo]"
+  },
+  "raw_response": "{\n  \"high_level_goal\": \"Find the lowest-price round-trip flight from Busan to Tokyo for travel March 15–20, 2026\",\n  \"comparison_target_info\": \"price: N/A on this page yet (destination and dates not entered)\",\n  \"comparison_criteria\": [\"price\"],\n  \"sub_task\": \"Enter the destination (Tokyo) into the 'Where to?' field so I can set travel dates and search for fares from Busan\",\n  \"action_in_natural_language\": \"Type Tokyo into the destination (Where to?) input field\",\n  \"grounded_action\": \"type [152] [Tokyo]\"\n}"
+}

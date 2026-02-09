@@ -1,0 +1,19 @@
+{
+  "url": "https://yelp.com",
+  "mode": "sequential",
+  "goal": "Find and book dinner: use Yelp to find a restaurant in San Francisco and get its name/address → use OpenTable to make a reservation for that restaurant → use Google Maps to get directions to the restaurant.",
+  "context": "High-level Goal: Find and book dinner: use Yelp to find a restaurant in San Francisco and get its name/address → use OpenTable to make a reservation for that restaurant → use Google Maps to get directions to the restaurant.\nDependency: restaurant name and address (and phone number if available) to use when searching/making a reservation on OpenTable\n\nInformation gathered so far:\n  - location: San Francisco, CA\n  - planned_search_query: sushi",
+  "is_action_valid": true,
+  "pred": {
+    "high_level_goal": "Find and book dinner: use Yelp to find a restaurant in San Francisco and get its name/address → use OpenTable to make a reservation for that restaurant → use Google Maps to get directions to the restaurant.",
+    "sub_task": "Search Yelp for a specific cuisine in San Francisco so we can identify a candidate restaurant and capture its name and address for the reservation step.",
+    "dependency": "restaurant name and address (and phone number if available) to use when searching/making a reservation on OpenTable",
+    "key_details": {
+      "location": "San Francisco, CA",
+      "planned_search_query": "sushi"
+    },
+    "action_in_natural_language": "Type sushi into the main Yelp search box (search for restaurants in San Francisco).",
+    "grounded_action": "type [34] [sushi]"
+  },
+  "raw_response": "{\n  \"high_level_goal\": \"Find and book dinner: use Yelp to find a restaurant in San Francisco and get its name/address → use OpenTable to make a reservation for that restaurant → use Google Maps to get directions to the restaurant.\",\n  \"sub_task\": \"Search Yelp for a specific cuisine in San Francisco so we can identify a candidate restaurant and capture its name and address for the reservation step.\",\n  \"dependency\": \"restaurant name and address (and phone number if available) to use when searching/making a reservation on OpenTable\",\n  \"key_details\": {\"location\": \"San Francisco, CA\", \"planned_search_query\": \"sushi\"},\n  \"action_in_natural_language\": \"Type sushi into the main Yelp search box (search for restaurants in San Francisco).\",\n  \"grounded_action\": \"type [34] [sushi]\"\n}"
+}

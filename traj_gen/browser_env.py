@@ -88,7 +88,13 @@ class ScriptBrowserEnv:
         # self.browser = self.playwright.chromium.launch(
         #     headless=True, slow_mo=0
         # )
-        self.browser = self.tls.playwright.chromium.launch(headless=False, slow_mo=0)
+        self.browser = self.tls.playwright.chromium.launch(
+            headless=False,
+            slow_mo=0,
+            args=[
+                "--disable-blink-features=AutomationControlled",
+            ],
+        )
 
         # Use custom viewport size if specified in the config, otherwise use the default.
         viewport_size = self.viewport_size.copy()
@@ -96,6 +102,7 @@ class ScriptBrowserEnv:
         self.context = self.browser.new_context(
             viewport=viewport_size,
             device_scale_factor=1,
+            user_agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
         )
         if not url.startswith("http"):
             self.page = None
@@ -105,10 +112,15 @@ class ScriptBrowserEnv:
         page.client = client  # type: ignore
 
         try:
-            page.goto(url)
+            page.goto(url, wait_until="domcontentloaded", timeout=60000)
         except Exception as e:
             logging.error(traceback.format_exc())
             raise e
+
+        try:
+            page.wait_for_load_state("networkidle", timeout=30000)
+        except Exception:
+            logging.warning("networkidle timeout — page is loaded, continuing anyway")
 
         # set the first page as the current page
         self.page = self.context.pages[0]

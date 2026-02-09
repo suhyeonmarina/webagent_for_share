@@ -702,6 +702,12 @@ class ImageObservationProcessor(ObservationProcessor):
         if self.observation_type == "image_som":
             # Produce the SoM image, with bounding boxes
             try:
+                # Wait for page to be fully loaded before screenshot
+                page.wait_for_load_state("networkidle", timeout=3000)
+            except:
+                pass  # Continue even if timeout
+
+            try:
                 # import pdb; pdb.set_trace()
                 screenshot_bytes = page.screenshot()  # full_page=True
                 # screenshot_bytes = page.screenshot()

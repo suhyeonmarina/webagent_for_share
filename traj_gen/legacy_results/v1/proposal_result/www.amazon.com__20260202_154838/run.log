@@ -1,0 +1,38 @@
+2026-02-02 15:48:38,350 [INFO] Setting up browser for https://www.amazon.com/
+2026-02-02 15:49:10,323 [WARNING] networkidle timeout — page is loaded, continuing anyway
+2026-02-02 15:49:10,484 [INFO] SharedContext:
+High-level Goal: (Not specified — propose a realistic task based on the current page)
+Dependency: (Not specified — propose a dependency consistent with the high-level goal)
+2026-02-02 15:49:17,273 [INFO] API response status: {'message': 'Incorrect API key provided: None. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}
+2026-02-02 15:49:17,273 [INFO] Full API response: {'error': {'message': 'Incorrect API key provided: None. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2026-02-02 15:49:17,273 [INFO] retry call gptv 0
+2026-02-02 15:49:17,273 [INFO] API response: {'error': {'message': 'Incorrect API key provided: None. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2026-02-02 15:49:17,273 [INFO] Exception: 'choices'
+2026-02-02 15:49:17,274 [INFO] Traceback (most recent call last):
+  File "/mnt/raid5/parksh/Explorer/traj_gen/llm_utils.py", line 39, in call_gpt4v
+    ans_1st_pass = a["choices"][0]["message"]["content"]
+                   ~^^^^^^^^^^^
+KeyError: 'choices'
+
+2026-02-02 15:49:27,678 [INFO] API response status: {'message': 'Incorrect API key provided: None. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}
+2026-02-02 15:49:27,678 [INFO] Full API response: {'error': {'message': 'Incorrect API key provided: None. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2026-02-02 15:49:27,678 [INFO] retry call gptv 1
+2026-02-02 15:49:27,678 [INFO] API response: {'error': {'message': 'Incorrect API key provided: None. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2026-02-02 15:49:27,678 [INFO] Exception: 'choices'
+2026-02-02 15:49:27,679 [INFO] Traceback (most recent call last):
+  File "/mnt/raid5/parksh/Explorer/traj_gen/llm_utils.py", line 39, in call_gpt4v
+    ans_1st_pass = a["choices"][0]["message"]["content"]
+                   ~^^^^^^^^^^^
+KeyError: 'choices'
+
+2026-02-02 15:49:38,017 [INFO] API response status: {'message': 'Incorrect API key provided: None. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}
+2026-02-02 15:49:38,017 [INFO] Full API response: {'error': {'message': 'Incorrect API key provided: None. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2026-02-02 15:49:38,017 [INFO] retry call gptv 2
+2026-02-02 15:49:38,017 [INFO] API response: {'error': {'message': 'Incorrect API key provided: None. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2026-02-02 15:49:38,018 [INFO] Exception: 'choices'
+2026-02-02 15:49:38,018 [INFO] Traceback (most recent call last):
+  File "/mnt/raid5/parksh/Explorer/traj_gen/llm_utils.py", line 39, in call_gpt4v
+    ans_1st_pass = a["choices"][0]["message"]["content"]
+                   ~^^^^^^^^^^^
+KeyError: 'choices'
+

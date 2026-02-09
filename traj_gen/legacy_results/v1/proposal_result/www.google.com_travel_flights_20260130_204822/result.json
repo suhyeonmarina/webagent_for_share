@@ -1,0 +1,15 @@
+{
+  "url": "https://www.google.com/travel/flights",
+  "mode": "sequential",
+  "goal": "Plan a 3-day weekend trip from Busan to Tokyo: find the best round-trip flights and then book a hotel near the arrival airport.",
+  "context": "High-level Goal: Plan a 3-day weekend trip from Busan to Tokyo: find the best round-trip flights and then book a hotel near the arrival airport.\nDependency: Flight search results from Google Flights: list of flight options with prices, departure and return dates/times, and arrival/departure airport codes (this information will be needed for hotel booking and final decision).",
+  "is_action_valid": true,
+  "pred": {
+    "high_level_goal": "Plan a 3-day weekend trip from Busan to Tokyo: find the best round-trip flights and then book a hotel near the arrival airport.",
+    "task": "Enter the destination (Tokyo) into the 'Where to?' field on Google Flights to start a flight search from Busan.",
+    "dependency": "Flight search results from Google Flights: list of flight options with prices, departure and return dates/times, and arrival/departure airport codes (this information will be needed for hotel booking and final decision).",
+    "action_in_natural_language": "Type Tokyo into the 'Where to?' destination input to start the flight search.",
+    "grounded_action": "type [152] [Tokyo]"
+  },
+  "raw_response": "{\n  \"high_level_goal\": \"Plan a 3-day weekend trip from Busan to Tokyo: find the best round-trip flights and then book a hotel near the arrival airport.\",\n  \"task\": \"Enter the destination (Tokyo) into the 'Where to?' field on Google Flights to start a flight search from Busan.\",\n  \"dependency\": \"Flight search results from Google Flights: list of flight options with prices, departure and return dates/times, and arrival/departure airport codes (this information will be needed for hotel booking and final decision).\",\n  \"action_in_natural_language\": \"Type Tokyo into the 'Where to?' destination input to start the flight search.\",\n  \"grounded_action\": \"type [152] [Tokyo]\"\n}"
+}

@@ -1,0 +1,25 @@
+[project]
+name = "explorer"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "aiohttp>=3.13.3",
+    "azure-identity>=1.25.1",
+    "beartype==0.18.5",
+    "bs4>=0.0.2",
+    "gymnasium>=1.2.3",
+    "langdetect>=1.0.9",
+    "lxml>=6.0.2",
+    "matplotlib>=3.10.8",
+    "nltk>=3.9.2",
+    "numpy>=2.4.1",
+    "openai>=2.15.0",
+    "pandas==2.2.2",
+    "pillow>=12.1.0",
+    "playwright>=1.57.0",
+    "tiktoken>=0.12.0",
+    "xlsxwriter>=3.2.9",
+    "yappi>=1.7.3",
+]

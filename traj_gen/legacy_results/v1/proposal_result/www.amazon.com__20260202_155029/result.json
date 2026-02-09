@@ -1,0 +1,13 @@
+{
+  "url": "https://www.amazon.com/",
+  "mode": "sequential",
+  "goal": "",
+  "context": "High-level Goal: (Not specified — propose a realistic task based on the current page)\nDependency: (Not specified — propose a dependency consistent with the high-level goal)",
+  "is_action_valid": false,
+  "pred": {
+    "task": "parse_failed",
+    "action_in_natural_language": "parse_failed",
+    "grounded_action": "stop"
+  },
+  "raw_response": "{{\n  \"high_level_goal\": \"Find the Sony WH-1000XM5 listing on Amazon.com and capture its price, seller, and whether it can be shipped to South Korea for a cross-retailer price comparison.\",\n  \"sub_task\": \"Search Amazon US for Sony WH-1000XM5 to find product listings.\",\n  \"dependency\": \"Product price, seller name, and shipping availability/estimated delivery to Republic of Korea for the Sony WH-1000XM5 on Amazon.\",\n  \"key_details\": {\"delivery_location\": \"Republic of Korea\", \"language\": \"English (EN)\", \"cart_items\": \"0\", \"search_box_id\": \"31\"},\n  \"action_in_natural_language\": \"Type Sony WH-1000XM5 into the Amazon search box and submit the search.\",\n  \"grounded_action\": \"type [31] [Sony WH-1000XM5]\"\n}}"
+}

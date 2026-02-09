@@ -1,2 +1,0 @@
-evals/miniwob/eval-explorer.sh: line 14: syntax error near unexpected token `newline'
-evals/miniwob/eval-explorer.sh: line 14: `    python -u -m evals.miniwob.main_slm --env $task --llm chatgpt --num-episodes 4 --erci 1 --irci 3 --sgrounding --use-dynamic-seed --output-dir LOG_DIR/$task --add-class-subset --ckpt-path <CKPT_PATH>'

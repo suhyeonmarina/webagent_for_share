@@ -1,0 +1,18 @@
+{
+  "url": "https://www.airbnb.com/",
+  "mode": "sequential",
+  "goal": "Book an Airbnb in Tokyo and then check the commute time from that accommodation to a conference venue on Google Maps.",
+  "context": "High-level Goal: Book an Airbnb in Tokyo and then check the commute time from that accommodation to a conference venue on Google Maps.\nDependency: Accommodation street address (the selected listing's address) — this will be needed by Google Maps to calculate commute times.\n\nInformation gathered so far:\n  - search_query: Tokyo, Japan",
+  "is_action_valid": true,
+  "pred": {
+    "high_level_goal": "Book an Airbnb in Tokyo and then check the commute time from that accommodation to a conference venue on Google Maps.",
+    "sub_task": "Search for available homes in Tokyo on Airbnb (enter destination) so I can select a listing and extract its street address for the next step.",
+    "dependency": "Accommodation street address (the selected listing's address) — this will be needed by Google Maps to calculate commute times.",
+    "key_details": {
+      "search_query": "Tokyo, Japan"
+    },
+    "action_in_natural_language": "Enter Tokyo, Japan into the 'Where' search field to start finding homes in Tokyo.",
+    "grounded_action": "type [159] [Tokyo, Japan]"
+  },
+  "raw_response": "{\n  \"high_level_goal\": \"Book an Airbnb in Tokyo and then check the commute time from that accommodation to a conference venue on Google Maps.\",\n  \"sub_task\": \"Search for available homes in Tokyo on Airbnb (enter destination) so I can select a listing and extract its street address for the next step.\",\n  \"dependency\": \"Accommodation street address (the selected listing's address) — this will be needed by Google Maps to calculate commute times.\",\n  \"key_details\": {\"search_query\": \"Tokyo, Japan\"},\n  \"action_in_natural_language\": \"Enter Tokyo, Japan into the 'Where' search field to start finding homes in Tokyo.\",\n  \"grounded_action\": \"type [159] [Tokyo, Japan]\"\n}"
+}

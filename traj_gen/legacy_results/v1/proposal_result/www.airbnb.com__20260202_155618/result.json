@@ -1,0 +1,25 @@
+{
+  "url": "https://www.airbnb.com/",
+  "mode": "sequential",
+  "goal": "Find and compare Airbnb stays in Seoul for a 2-night trip (Apr 24–26) for 2 guests, and collect a shortlist of listings with prices and links.",
+  "context": "High-level Goal: Find and compare Airbnb stays in Seoul for a 2-night trip (Apr 24–26) for 2 guests, and collect a shortlist of listings with prices and links.\nDependency: Search results for Seoul (list of listing URLs, names, and nightly/total price for Apr 24–26) — the next site will need the selected listing URL and price.\n\nInformation gathered so far:\n  - visible_listings: {'168': 'Room in No-ryang-jin 1 dong', '170': 'Guesthouse in Jung-gu', '172': 'Room in Jongno-gu', '174': 'Hotel in Myeong-dong', '176': 'Apartment in Gwanak-gu', '178': 'Room in Yeongdeungpo-gu'}",
+  "is_action_valid": true,
+  "pred": {
+    "high_level_goal": "Find and compare Airbnb stays in Seoul for a 2-night trip (Apr 24–26) for 2 guests, and collect a shortlist of listings with prices and links.",
+    "sub_task": "Start a search by entering the destination (Seoul) in the Airbnb Where field to load Seoul-specific listings.",
+    "dependency": "Search results for Seoul (list of listing URLs, names, and nightly/total price for Apr 24–26) — the next site will need the selected listing URL and price.",
+    "key_details": {
+      "visible_listings": {
+        "168": "Room in No-ryang-jin 1 dong",
+        "170": "Guesthouse in Jung-gu",
+        "172": "Room in Jongno-gu",
+        "174": "Hotel in Myeong-dong",
+        "176": "Apartment in Gwanak-gu",
+        "178": "Room in Yeongdeungpo-gu"
+      }
+    },
+    "action_in_natural_language": "Type 'Seoul' into the Where search input to begin a search for stays in Seoul.",
+    "grounded_action": "type [159] [Seoul]"
+  },
+  "raw_response": "{\n  \"high_level_goal\": \"Find and compare Airbnb stays in Seoul for a 2-night trip (Apr 24–26) for 2 guests, and collect a shortlist of listings with prices and links.\",\n  \"sub_task\": \"Start a search by entering the destination (Seoul) in the Airbnb Where field to load Seoul-specific listings.\",\n  \"dependency\": \"Search results for Seoul (list of listing URLs, names, and nightly/total price for Apr 24–26) — the next site will need the selected listing URL and price.\",\n  \"key_details\": {\n    \"visible_listings\": {\n      \"168\": \"Room in No-ryang-jin 1 dong\",\n      \"170\": \"Guesthouse in Jung-gu\",\n      \"172\": \"Room in Jongno-gu\",\n      \"174\": \"Hotel in Myeong-dong\",\n      \"176\": \"Apartment in Gwanak-gu\",\n      \"178\": \"Room in Yeongdeungpo-gu\"\n    }\n  },\n  \"action_in_natural_language\": \"Type 'Seoul' into the Where search input to begin a search for stays in Seoul.\",\n  \"grounded_action\": \"type [159] [Seoul]\"\n}"
+}

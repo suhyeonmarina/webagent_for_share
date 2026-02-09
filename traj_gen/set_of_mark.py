@@ -24,7 +24,7 @@ def _add_set_of_mark(screenshot, ROIs):
     rects_below = list()  # Scroll down to see
 
     fnt = ImageFont.load_default()  # 14
-    base = screenshot.convert("L").convert("RGBA")
+    base = screenshot.convert("RGBA")
     overlay = Image.new("RGBA", base.size)
 
     draw = ImageDraw.Draw(overlay)
@@ -68,9 +68,9 @@ def _trim_drawn_text(draw, text, font, max_width):
 
 
 def _draw_roi(draw, idx, font, rect):
-    color = _color(idx)
-    luminance = color[0] * 0.3 + color[1] * 0.59 + color[2] * 0.11
-    text_color = (0, 0, 0, 255) if luminance > 90 else (255, 255, 255, 255)
+    # color = _color(idx)
+    # luminance = color[0] * 0.3 + color[1] * 0.59 + color[2] * 0.11
+    # text_color = (0, 0, 0, 255) if luminance > 90 else (255, 255, 255, 255)
 
     roi = [(rect["left"], rect["top"]), (rect["right"], rect["bottom"])]
 
@@ -81,18 +81,19 @@ def _draw_roi(draw, idx, font, rect):
         label_location = (rect["right"], rect["bottom"])
         label_anchor = "rt"
 
-    draw.rectangle(roi, outline=color, fill=(color[0], color[1], color[2], 48), width=2)
+    # Black outline, no fill
+    draw.rectangle(roi, outline=(0, 0, 0, 255), width=2)
 
     bbox = draw.textbbox(
         label_location, str(idx), font=font, anchor=label_anchor, align="center"
     )
     bbox = (bbox[0] - 3, bbox[1] - 3, bbox[2] + 3, bbox[3] + 3)
-    draw.rectangle(bbox, fill=color)
+    draw.rectangle(bbox, fill=(0,0,0,255))
 
     draw.text(
         label_location,
         str(idx),
-        fill=text_color,
+        fill=(255,255,255,255),
         font=font,
         anchor=label_anchor,
         align="center",

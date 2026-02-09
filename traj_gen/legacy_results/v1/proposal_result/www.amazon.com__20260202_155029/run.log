@@ -1,0 +1,46 @@
+2026-02-02 15:50:29,952 [INFO] Setting up browser for https://www.amazon.com/
+2026-02-02 15:51:01,730 [WARNING] networkidle timeout — page is loaded, continuing anyway
+2026-02-02 15:51:01,866 [INFO] SharedContext:
+High-level Goal: (Not specified — propose a realistic task based on the current page)
+Dependency: (Not specified — propose a dependency consistent with the high-level goal)
+2026-02-02 15:51:22,184 [INFO] API response status: OK
+2026-02-02 15:51:22,184 [INFO] Full API response: {'id': 'chatcmpl-D4i46GH9ZnQVXvjAZuNUQWFbImdEq', 'object': 'chat.completion', 'created': 1770015070, 'model': 'gpt-5-mini-2025-08-07', 'choices': [{'index': 0, 'message': {'role': 'assistant', 'content': '{{\n  "high_level_goal": "Find the Sony WH-1000XM5 listing on Amazon.com and capture its price, seller, and whether it can be shipped to South Korea for a cross-retailer price comparison.",\n  "sub_task": "Search Amazon US for Sony WH-1000XM5 to find product listings.",\n  "dependency": "Product price, seller name, and shipping availability/estimated delivery to Republic of Korea for the Sony WH-1000XM5 on Amazon.",\n  "key_details": {"delivery_location": "Republic of Korea", "language": "English (EN)", "cart_items": "0", "search_box_id": "31"},\n  "action_in_natural_language": "Type Sony WH-1000XM5 into the Amazon search box and submit the search.",\n  "grounded_action": "type [31] [Sony WH-1000XM5]"\n}}', 'refusal': None, 'annotations': []}, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 2812, 'completion_tokens': 899, 'total_tokens': 3711, 'prompt_tokens_details': {'cached_tokens': 0, 'audio_tokens': 0}, 'completion_tokens_details': {'reasoning_tokens': 704, 'audio_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}}, 'service_tier': 'default', 'system_fingerprint': None}
+2026-02-02 15:51:22,184 [INFO] Exploration Proposal Agent response = {{
+  "high_level_goal": "Find the Sony WH-1000XM5 listing on Amazon.com and capture its price, seller, and whether it can be shipped to South Korea for a cross-retailer price comparison.",
+  "sub_task": "Search Amazon US for Sony WH-1000XM5 to find product listings.",
+  "dependency": "Product price, seller name, and shipping availability/estimated delivery to Republic of Korea for the Sony WH-1000XM5 on Amazon.",
+  "key_details": {"delivery_location": "Republic of Korea", "language": "English (EN)", "cart_items": "0", "search_box_id": "31"},
+  "action_in_natural_language": "Type Sony WH-1000XM5 into the Amazon search box and submit the search.",
+  "grounded_action": "type [31] [Sony WH-1000XM5]"
+}}
+2026-02-02 15:51:22,184 [ERROR] Parse error: unhashable type: 'dict'
+2026-02-02 15:51:22,186 [ERROR] Traceback (most recent call last):
+  File "/mnt/raid5/parksh/Explorer/traj_gen/exploration_proposal_agent.py", line 207, in _parse_response
+    pred = json.loads(json_str)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/raid5/parksh/.local/share/uv/python/cpython-3.11.14-linux-x86_64-gnu/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/raid5/parksh/.local/share/uv/python/cpython-3.11.14-linux-x86_64-gnu/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/raid5/parksh/.local/share/uv/python/cpython-3.11.14-linux-x86_64-gnu/lib/python3.11/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/raid5/parksh/Explorer/traj_gen/exploration_proposal_agent.py", line 210, in _parse_response
+    pred = ast.literal_eval(json_str)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/raid5/parksh/.local/share/uv/python/cpython-3.11.14-linux-x86_64-gnu/lib/python3.11/ast.py", line 110, in literal_eval
+    return _convert(node_or_string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/raid5/parksh/.local/share/uv/python/cpython-3.11.14-linux-x86_64-gnu/lib/python3.11/ast.py", line 92, in _convert
+    return set(map(_convert, node.elts))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unhashable type: 'dict'
+
+2026-02-02 15:51:22,465 [INFO] Done.
