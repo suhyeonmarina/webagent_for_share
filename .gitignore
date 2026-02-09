@@ -3,3 +3,6 @@ __pycache__/
 *$py.class
 .DS_Store
 .claude
+proposal_result/
+refine_result/
+traj_gen/legacy_results/
